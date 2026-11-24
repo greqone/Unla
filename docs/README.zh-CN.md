@@ -95,7 +95,7 @@ docker run -d \
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/unla)
 
-使用 all-in-one 镜像一键部署，SQLite 数据保存在 `/app/data` 持久化卷中。每次部署都会自动生成超级管理员密码（`SUPER_ADMIN_PASSWORD`）和 JWT 密钥；使用 `admin` 登录，网关端点位于 `https://YOUR-DOMAIN/gateway`。
+使用 all-in-one 镜像一键部署，SQLite 数据库（`APISERVER_DB_NAME` 和 `GATEWAY_DB_NAME` 均指向 `/app/data/unla.db`）保存在 `/app/data` 持久化卷中。每次部署都会自动生成超级管理员密码和 JWT 密钥。部署完成后，在 Railway 服务的 **Variables** 页面复制 `SUPER_ADMIN_PASSWORD`，打开服务的公网域名 `https://YOUR-DOMAIN`（而不是 `localhost:8080`），使用 `admin` 登录。网关端点位于 `https://YOUR-DOMAIN/gateway`。
 
 ### 访问和配置
 

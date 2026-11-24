@@ -71,7 +71,7 @@ docker run -d \
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/unla)
 
-One-click deploy of the all-in-one image with SQLite on a persistent `/app/data` volume. The super admin password (`SUPER_ADMIN_PASSWORD`) and the JWT secret are generated per deployment; log in as `admin`, and gateway endpoints are served under `https://YOUR-DOMAIN/gateway`.
+One-click deploy of the all-in-one image with SQLite on a persistent `/app/data` volume (`APISERVER_DB_NAME` and `GATEWAY_DB_NAME` both point to `/app/data/unla.db`). The super admin password and the JWT secret are generated per deployment. After the deploy, copy `SUPER_ADMIN_PASSWORD` from the service's **Variables** tab in Railway, open the service's public domain `https://YOUR-DOMAIN` (not `localhost:8080`) and log in as `admin`. Gateway endpoints are served under `https://YOUR-DOMAIN/gateway`.
 
 ### Access and Configuration
 
